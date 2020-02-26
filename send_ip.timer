@@ -1,0 +1,10 @@
+[Unit] 
+Description=Trigger send_ip once sshd is up
+Wants=sshd.service
+After=sshd.service
+
+[Timer]
+OnActiveSec=1s
+
+[Install]
+WantedBy=timers.target
