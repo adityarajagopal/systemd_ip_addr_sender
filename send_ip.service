@@ -1,7 +1,7 @@
 [Unit]
 Description=Send ip to uni computer after boot is completed 
-StartLimitInterval=20s
-StartLimitBurst=5
+StartLimitInterval=40s
+StartLimitBurst=6
 
 [Service]
 Type=simple
@@ -9,7 +9,7 @@ User=nvidia
 Group=nvidia
 ExecStart=/etc/sendip/send_ip
 Restart=on-failure
-RestartSec=2s
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
